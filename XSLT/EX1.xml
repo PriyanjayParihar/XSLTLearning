@@ -1,0 +1,19 @@
+<?xml version = "1.0"?> 
+<?xml-stylesheet type = "text/xsl" href ="EX1.xsl"?> 
+<students>
+<student rollno="101">
+<firstname>Rahul</firstname>
+<lastname>verma</lastname>
+<marks>90</marks>
+</student>
+<student rollno="102">
+<firstname>Ravi</firstname>
+<lastname>singh</lastname>
+<marks>98</marks>
+</student>
+<student rollno="103">
+<firstname>ajay</firstname>
+<lastname>verma</lastname>
+<marks>100</marks>
+</student>
+</students>

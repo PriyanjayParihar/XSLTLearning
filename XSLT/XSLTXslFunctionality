@@ -1,0 +1,75 @@
+All xsl:...... documentation of working
+
+<xsl:template> is root to start creating template
+
+<xsl:template 
+   name = Qname 
+   match = Pattern 
+   priority = number 
+   mode = QName >
+</xsl:template>
+
+
+
+
+
+
+<value-of select=''> used to fetch the value of xml element with same select
+select will work like a dir structure or tag parent child relatonal
+
+<for-each select=''> use loop to traverse on multiple xml elements
+-----------------------------------------------------------------------------
+<sort select='' > sort the result of inside body on the basis of select 
+1	select
+
+Sorting key of the node.
+
+2	lang
+
+Language alphabet used to determine sort order.
+
+3	data-type
+
+Data type of the text.
+
+4	order
+
+Sorting order. Default is "ascending".
+
+5	case-order
+
+Sorting order of string by capitalization. Default is "upper-first".
+
+
+<xsl:sort 
+   select = string-expression  
+   lang = { nmtoken } 
+   data-type = { "text" | "number" | QName } 
+   order = { "ascending" | "descending" } 
+   case-order = { "upper-first" | "lower-first" } > 
+</xsl:sort> 
+
+-------------------------------------------------------------------------------
+
+<if test=''> if condition  works like if of other lang
+<choose> use like if else
+<when test=''> works like if
+<otherwise>    works like else
+</choose>
+
+-------------------------------------------------------------------------------
+<xsl:message 
+   terminate = "yes" | "no" >
+</xsl:message>
+
+we cxan use this inside if to show error msg and terminate the procss
+
+<xsl: import href=> with this we can import other xsl file into current and use that
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<xsl:stylesheet version = "1.0" 
+   xmlns:xsl = "http://www.w3.org/1999/XSL/Transform">  
+   <xsl:import href = "students.xsl"/>  
+   <xsl:template match = "/"> 
+      <xsl:apply-imports/> 
+   </xsl:template>  
+</xsl:stylesheet> 
